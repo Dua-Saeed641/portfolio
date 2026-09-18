@@ -10,12 +10,12 @@ export default function Home() {
       textAlign: "center"
     }}>
       <div style={{
-        background: "rgba(17, 24, 39, 0.7)",
-        border: "1px solid rgba(255, 255, 255, 0.1)",
+        background: "var(--card-bg)",
+        border: "1px solid var(--card-border)",
         borderRadius: "1rem",
         padding: "3rem 4rem",
         backdropFilter: "blur(12px)",
-        boxShadow: "0 20px 40px rgba(0, 0, 0, 0.4)",
+        boxShadow: "0 20px 40px rgba(44, 37, 35, 0.08)",
         maxWidth: "600px",
         width: "100%"
       }}>
@@ -27,12 +27,12 @@ export default function Home() {
           textTransform: "uppercase",
           padding: "0.35rem 0.85rem",
           borderRadius: "9999px",
-          background: "rgba(99, 102, 241, 0.15)",
-          color: "#818cf8",
-          border: "1px solid rgba(99, 102, 241, 0.3)",
+          background: "rgba(99, 102, 241, 0.1)",
+          color: "#4f46e5",
+          border: "1px solid rgba(99, 102, 241, 0.2)",
           marginBottom: "1.5rem"
         }}>
-          Milestone 0 — Project Foundation
+          Milestone 2 — Paper Grid Background
         </div>
         
         <h1 className="hero-gradient-text" style={{
@@ -41,15 +41,15 @@ export default function Home() {
           lineHeight: 1.2,
           marginBottom: "1rem"
         }}>
-          Dua Saeed Portfolio
+          Hi, I&apos;m Dua Saeed.
         </h1>
         
         <p style={{
-          color: "#9ca3af",
+          color: "var(--text-muted)",
           fontSize: "1rem",
           lineHeight: 1.6
         }}>
-          Next.js App Router, TypeScript, React, standard CSS/PostCSS, and <code style={{ color: "#e5e7eb", background: "rgba(255,255,255,0.08)", padding: "0.2rem 0.4rem", borderRadius: "0.25rem" }}>next/font</code> ready for upcoming portfolio sections.
+          Next.js App Router, TypeScript, React, standard CSS/PostCSS, and <code style={{ color: "var(--foreground)", background: "rgba(44,37,35,0.06)", padding: "0.2rem 0.4rem", borderRadius: "0.25rem" }}>next/font</code> ready for upcoming portfolio sections.
         </p>
       </div>
     </main>
