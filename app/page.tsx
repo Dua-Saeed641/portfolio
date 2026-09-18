@@ -32,13 +32,15 @@ export default function Home() {
           border: "1px solid rgba(99, 102, 241, 0.2)",
           marginBottom: "1.5rem"
         }}>
-          Milestone 2 — Paper Grid Background
+          Milestone 3 — Typography
         </div>
         
-        <h1 className="hero-gradient-text" style={{
-          fontSize: "2.75rem",
-          fontWeight: 800,
-          lineHeight: 1.2,
+        <h1 className="font-serif" style={{
+          fontSize: "3.25rem",
+          fontWeight: 700,
+          lineHeight: 1.15,
+          color: "var(--foreground)",
+          letterSpacing: "-0.02em",
           marginBottom: "1rem"
         }}>
           Hi, I&apos;m Dua Saeed.

@@ -1,13 +1,36 @@
 import type { Metadata } from "next";
-import { Inter, Geist } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const satoshi = localFont({
+  src: [
+    {
+      path: "./fonts/Satoshi-Variable.woff2",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Satoshi-VariableItalic.woff2",
+      style: "italic",
+    },
+  ],
+  variable: "--font-satoshi",
+  display: "swap",
+});
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const boska = localFont({
+  src: [
+    {
+      path: "./fonts/Boska-Variable.woff2",
+      style: "normal",
+    },
+    {
+      path: "./fonts/Boska-VariableItalic.woff2",
+      style: "italic",
+    },
+  ],
+  variable: "--font-boska",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", geist.variable)}>
+    <html lang="en" className={cn(satoshi.variable, boska.variable)}>
       <body className="antialiased">{children}</body>
     </html>
   );
