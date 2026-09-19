@@ -1,60 +1,23 @@
 export default function Home() {
   return (
-    <main style={{
-      minHeight: "100vh",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      padding: "2rem",
-      textAlign: "center"
-    }}>
-      <div style={{
-        background: "var(--card-bg)",
-        border: "1px solid var(--card-border)",
-        borderRadius: "1rem",
-        padding: "3rem 4rem",
-        backdropFilter: "blur(12px)",
-        boxShadow: "0 20px 40px rgba(44, 37, 35, 0.08)",
-        maxWidth: "600px",
-        width: "100%"
-      }}>
-        <div style={{
-          display: "inline-block",
-          fontSize: "0.85rem",
-          fontWeight: 600,
-          letterSpacing: "0.05em",
-          textTransform: "uppercase",
-          padding: "0.35rem 0.85rem",
-          borderRadius: "9999px",
-          background: "rgba(99, 102, 241, 0.1)",
-          color: "#4f46e5",
-          border: "1px solid rgba(99, 102, 241, 0.2)",
-          marginBottom: "1.5rem"
-        }}>
-          Milestone 3 — Typography
-        </div>
-        
-        <h1 className="font-serif" style={{
-          fontSize: "3.25rem",
-          fontWeight: 700,
-          lineHeight: 1.15,
-          color: "var(--foreground)",
-          letterSpacing: "-0.02em",
-          marginBottom: "1rem"
-        }}>
+    <main className="w-full max-w-7xl mx-auto px-8 md:px-16 py-16 md:py-24">
+      <section aria-label="Hero" className="border-l-2 border-foreground/20 pl-6 md:pl-10 space-y-6">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-normal tracking-tight text-foreground">
           Hi, I&apos;m Dua Saeed.
         </h1>
         
-        <p style={{
-          color: "var(--text-muted)",
-          fontSize: "1rem",
-          lineHeight: 1.6
-        }}>
-          Next.js App Router, TypeScript, React, standard CSS/PostCSS, and <code style={{ color: "var(--foreground)", background: "rgba(44,37,35,0.06)", padding: "0.2rem 0.4rem", borderRadius: "0.25rem" }}>next/font</code> ready for upcoming portfolio sections.
+        <p className="font-sans text-xl sm:text-2xl md:text-3xl text-foreground/80 font-normal">
+          I&apos;m a Data Engineer
         </p>
-      </div>
+        
+        <div className="pt-2">
+          <span className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm tracking-widest uppercase text-foreground/70 bg-foreground/5 border border-foreground/15 px-3.5 py-1.5 rounded-full">
+            Open to work <span aria-hidden="true">&rarr;</span>
+          </span>
+        </div>
+      </section>
     </main>
   );
 }
+
 
