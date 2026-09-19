@@ -43,6 +43,8 @@ const boska = localFont({
 
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
+import DataRevealLayer from "@/components/DataRevealLayer";
+import { SidebarProvider } from "@/context/SidebarContext";
 
 export const metadata: Metadata = {
   title: "Dua Saeed Portfolio",
@@ -56,15 +58,28 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={cn(satoshi.variable, boska.variable, spaceMono.variable)}>
-      <body className="antialiased min-h-screen bg-background text-foreground flex flex-col md:flex-row">
-        <Sidebar />
-        <div className="flex-1 min-w-0 flex flex-col min-h-screen">
-          <Navbar />
-          <main className="flex-1">{children}</main>
-        </div>
+      <body className="antialiased min-h-screen bg-background text-foreground relative">
+        <SidebarProvider>
+          {/* Full-height flex row */}
+          <div className="flex min-h-screen">
+            {/* Sidebar — sticky on desktop, drawer on mobile */}
+            <Sidebar />
+
+            {/* Main column: navbar + page content */}
+            <div className="flex-1 min-w-0 flex flex-col relative">
+              <Navbar />
+
+              {/* Content viewport area — bounds the cursor reveal layer */}
+              <div className="flex-1 relative min-h-0 overflow-hidden">
+                <DataRevealLayer />
+                <main className="relative z-10 min-h-full flex flex-col">
+                  {children}
+                </main>
+              </div>
+            </div>
+          </div>
+        </SidebarProvider>
       </body>
     </html>
   );
 }
-
-
